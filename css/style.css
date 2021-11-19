@@ -1,0 +1,428 @@
+/* general styling */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #23263A;
+  color: #efefef;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+#services .title, #about .title, #portfolio .title, #testimonials .title, #blogs .title, #contacts .title {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+#services .title img, #about .title img, #portfolio .title img, #testimonials .title img, #blogs .title img, #contacts .title img {
+  height: 0.4em;
+  width: 12em;
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+}
+
+#banner header {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner nav #logo a {
+  text-decoration: none;
+  color: #efefef;
+  padding-bottom: 2px;
+}
+
+#banner nav #logo a span {
+  color: #ff9933;
+  border-bottom: 2px solid #ff9933;
+}
+
+#banner nav ul {
+  width: 60%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#banner nav ul li a {
+  text-decoration: none;
+  color: #efefef;
+  text-transform: capitalize;
+}
+
+#banner .showcase {
+  width: 100%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#banner .showcase .showcase-info {
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner .showcase .showcase-info .socials {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner .showcase .showcase-info .socials div {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #ff9933;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#banner .showcase .showcase-info .socials div a {
+  display: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+#banner .showcase .showcase-info .socials div a img {
+  width: 100%;
+}
+
+#banner .showcase .showcase-info .socials div:hover {
+  background-color: #ff9933;
+  color: #efefef;
+}
+
+#banner .showcase .showcase-info a.btn {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #efefef;
+  padding: .6em 1.2em;
+  border: 1px solid #ff9933;
+}
+
+#banner .showcase .showcase-info .btn:hover {
+  background-color: #ff9933;
+}
+
+#services {
+  background-color: #1f2235;
+  padding: 2em 1em;
+}
+
+#services .title h2 {
+  text-transform: capitalize;
+}
+
+#services .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+}
+
+#services .service .card {
+  width: 30%;
+  background-color: #23263A;
+  padding: 1em;
+}
+
+#services .service .card h3 {
+  text-transform: capitalize;
+}
+
+#about {
+  padding: 2em 1em;
+}
+
+#about .title h2 {
+  text-transform: capitalize;
+}
+
+#about .about-me {
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .about-me .about-image {
+  width: 33%;
+}
+
+#about .about-me .about-image img {
+  width: 100%;
+}
+
+#about .about-me .about-content {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .about-me .about-content h2 {
+  text-transform: capitalize;
+}
+
+#about .about-me .about-content .about-details {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 1.5em;
+  grid-gap: 1em;
+}
+
+#about .about-me .about-content .about-details h3 {
+  text-transform: capitalize;
+  color: #ff9933;
+}
+
+#portfolio {
+  padding: 2em 1em;
+  background-color: #1f2235;
+}
+
+#portfolio .title h2 {
+  text-transform: capitalize;
+}
+
+#portfolio .samples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.5em 0;
+}
+
+#portfolio .samples .card {
+  width: 30%;
+  height: 350px;
+  background-color: #23263A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+#portfolio .samples .card img {
+  width: 100%;
+  height: 40%;
+}
+
+#portfolio .samples .card .card-body {
+  height: 60%;
+  margin: .7em 1em;
+  position: relative;
+}
+
+#portfolio .samples .card .card-body a.btn {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #efefef;
+  padding: .6em 1.2em;
+  float: right;
+  border: 1px solid #ff9933;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#portfolio .samples .card .card-body .btn:hover {
+  background-color: #ff9933;
+}
+
+#testimonials {
+  padding: 2em 1em;
+}
+
+#testimonials .title h2 {
+  text-transform: capitalize;
+}
+
+#testimonials .customers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0;
+}
+
+#testimonials .customers .customer {
+  width: 32%;
+  background-color: #1f2235;
+  text-align: center;
+}
+
+#testimonials .customers .customer img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+#testimonials .customers .customer .customer-name, #testimonials .customers .customer .customer-title {
+  text-transform: capitalize;
+}
+
+#blogs {
+  background-color: #1f2235;
+  padding: 2em 1em;
+}
+
+#blogs .title h2 {
+  text-transform: capitalize;
+}
+
+#blogs .articles {
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#blogs .articles .article {
+  width: 30%;
+  background-color: #23263A;
+}
+
+#blogs .articles .article img {
+  width: 100%;
+}
+
+#blogs .articles .article .article-body {
+  margin: .7em 1em;
+}
+
+#blogs .articles .article .article-body a.btn {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #efefef;
+  padding: .6em 1.2em;
+  float: right;
+  border: 1px solid #ff9933;
+  margin: 1em 0;
+}
+
+#blogs .articles .article .article-body .btn:hover {
+  background-color: #ff9933;
+}
+
+#contacts .title h2 {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=style.css.map */
