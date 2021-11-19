@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 /* general styling */
 * {
   -webkit-box-sizing: border-box;
@@ -10,6 +11,7 @@ body {
   line-height: 1.6;
   background-color: #23263A;
   color: #efefef;
+  font-family: Poppins sans-serif;
 }
 
 .container {
@@ -424,5 +426,41 @@ body {
 
 #contacts .title h2 {
   text-transform: capitalize;
+  font-size: 3em;
+}
+
+#contacts .title p {
+  font-style: italic;
+}
+
+#contacts .contact-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  max-width: 980px;
+  margin-top: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contacts .contact-links .contact-details {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+#contacts .contact-links .contact-details:hover {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
 }
 /*# sourceMappingURL=style.css.map */
