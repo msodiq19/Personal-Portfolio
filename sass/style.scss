@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import 'responsive';
 $primary-color: #23263A;
 $dark-color: #1f2235;
 $light-color: #efefef;
@@ -13,15 +14,20 @@ $secondary-color:#ff9933;
 }
 
 body {
+    width: 100vw;
     line-height: 1.6;
     background-color: $primary-color;
     color: $light-color;
     font-family: Poppins sans-serif;
+    font-size: 16px;
 }
 
 .container {
     width: 80%;
     margin: auto;
+}
+section{
+    width: 100vw;
 }
 
 %title {
@@ -36,12 +42,16 @@ body {
 }
 
 #banner {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     header {
         height: 10vh;
         display: flex;
         align-items: center;
+
+        #menu{
+            display: none;
+        }
     }
     nav {
         width: 100%;
@@ -129,6 +139,7 @@ body {
 }
 
 #services {
+    width: 100vw;
     background-color: $dark-color;
     padding: 2em 1em;
     .title {
@@ -148,7 +159,7 @@ body {
         .card {
             width: 30%;
             background-color: $primary-color;
-            padding: 1em;
+            padding: 1.5em 1em;
             h3 {
                 text-transform: capitalize;
             }
@@ -227,7 +238,7 @@ body {
             
             img {
                 width: 100%;
-                height: 40%;
+                height: 200px;
             }
             .card-body {
                 height: 60%;
@@ -271,8 +282,14 @@ body {
         margin: 1em 0;
         .customer {
             width: 32%;
+            height: 350px;
             background-color: $dark-color;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-evenly;
             text-align: center;
+            padding: 1em;
             img{
                 width: 100px;
                 border-radius: 50%
@@ -307,6 +324,7 @@ body {
             background-color: $primary-color;
             img{
                 width: 100%;
+                height: 200px;
             }
             .article-body {
                 margin: .7em 1em;
@@ -331,9 +349,9 @@ body {
 #contacts {
     .title {
         @extend %title;
+        padding: 2em 1em;
         h2 {
             text-transform: capitalize;
-            font-size: 3em
         }
         p{
             font-style: italic
@@ -347,14 +365,11 @@ body {
         justify-content: space-between;
         width: 80%;
         margin: auto;
-        max-width: 980px;
-        margin-top: 2rem;
         flex-wrap: wrap;
 
         .contact-details {
             text-decoration: none;
             color: #fff;
-            font-size: 1.5rem;
             text-shadow: 2px 2px 1px #1f1f1f;
             transition: transform 0.3s ease-out;
         }
@@ -363,3 +378,110 @@ body {
         }
     }
 }
+
+@media (max-width: 850px) {
+
+    #banner{
+        header.head{
+            #menu{
+                display: block;
+                cursor: pointer;
+            }
+            nav{
+                ul{
+                    width: 80vw;
+                    height: 90vh;
+                    position: fixed;
+                    top: 10%;
+                    right: -80%;
+                    flex-flow: column nowrap;
+                    align-items: flex-start;
+                    background-color: $dark-color;
+                    z-index: 2; 
+                }
+                .show{
+                    right: 0;
+                }
+                // ul::before{
+                //     content: "x";
+                //     font-size: 24px;
+                //     padding: 0.5em;
+                //     cursor: pointer;
+                // }
+                li{
+                    width: 100%;
+                    padding: 1em;
+                }
+                li:hover{
+                    border-left: 2px solid $secondary-color;
+                    background-color: $primary-color;
+                }
+            }
+        }
+        .showcase{
+            .showcase-info{
+                width: 70%;
+            }
+        }
+    }
+
+    #services{
+        .title{
+            width: 70%;
+        }
+        .service{
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            .card{
+                width: 90%;
+                margin: 1em 0;
+            }
+        }   
+    }
+
+    #about{
+        .about-me{
+            flex-flow: column nowrap;
+            .about-image{
+                width: 80%;
+            }
+            .about-content{
+                width: 80%;
+                margin-top: 2em;
+            }
+        }
+    }
+
+    #portfolio{
+        .samples{
+            flex-flow: column nowrap;
+            .card{
+                width: 90%;
+                margin: 1em 0;
+            }
+        }
+    }
+
+    #testimonials{
+        .customers{
+            flex-flow: column nowrap;
+            .customer{
+                width: 90%;
+                margin: 1em 0;
+            }
+        }
+    }
+
+    #blogs{
+        .articles{
+            flex-flow: column nowrap;
+            .article{
+                width: 90%;
+                margin: 1em 0;
+            }
+        }
+    }
+}
+
+
+

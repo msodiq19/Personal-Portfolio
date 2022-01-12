@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@media (max-width: 500px) {
+  body {
+    background-color: #777777;
+  }
+}
+
 /* general styling */
 * {
   -webkit-box-sizing: border-box;
@@ -8,15 +14,21 @@
 }
 
 body {
+  width: 100vw;
   line-height: 1.6;
   background-color: #23263A;
   color: #efefef;
   font-family: Poppins sans-serif;
+  font-size: 16px;
 }
 
 .container {
   width: 80%;
   margin: auto;
+}
+
+section {
+  width: 100vw;
 }
 
 #services .title, #about .title, #portfolio .title, #testimonials .title, #blogs .title, #contacts .title {
@@ -31,7 +43,7 @@ body {
 }
 
 #banner {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -43,6 +55,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#banner header #menu {
+  display: none;
 }
 
 #banner nav {
@@ -184,6 +200,7 @@ body {
 }
 
 #services {
+  width: 100vw;
   background-color: #1f2235;
   padding: 2em 1em;
 }
@@ -208,7 +225,7 @@ body {
 #services .service .card {
   width: 30%;
   background-color: #23263A;
-  padding: 1em;
+  padding: 1.5em 1em;
 }
 
 #services .service .card h3 {
@@ -314,7 +331,7 @@ body {
 
 #portfolio .samples .card img {
   width: 100%;
-  height: 40%;
+  height: 200px;
 }
 
 #portfolio .samples .card .card-body {
@@ -362,8 +379,23 @@ body {
 
 #testimonials .customers .customer {
   width: 32%;
+  height: 350px;
   background-color: #1f2235;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
+  padding: 1em;
 }
 
 #testimonials .customers .customer img {
@@ -404,6 +436,7 @@ body {
 
 #blogs .articles .article img {
   width: 100%;
+  height: 200px;
 }
 
 #blogs .articles .article .article-body {
@@ -424,9 +457,12 @@ body {
   background-color: #ff9933;
 }
 
+#contacts .title {
+  padding: 2em 1em;
+}
+
 #contacts .title h2 {
   text-transform: capitalize;
-  font-size: 3em;
 }
 
 #contacts .title p {
@@ -442,8 +478,6 @@ body {
           justify-content: space-between;
   width: 80%;
   margin: auto;
-  max-width: 980px;
-  margin-top: 2rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -451,7 +485,6 @@ body {
 #contacts .contact-links .contact-details {
   text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
@@ -462,5 +495,101 @@ body {
 #contacts .contact-links .contact-details:hover {
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
+}
+
+@media (max-width: 850px) {
+  #banner header.head #menu {
+    display: block;
+    cursor: pointer;
+  }
+  #banner header.head nav ul {
+    width: 80vw;
+    height: 90vh;
+    position: fixed;
+    top: 10%;
+    right: -80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: #1f2235;
+    z-index: 2;
+  }
+  #banner header.head nav .show {
+    right: 0;
+  }
+  #banner header.head nav li {
+    width: 100%;
+    padding: 1em;
+  }
+  #banner header.head nav li:hover {
+    border-left: 2px solid #ff9933;
+    background-color: #23263A;
+  }
+  #banner .showcase .showcase-info {
+    width: 70%;
+  }
+  #services .title {
+    width: 70%;
+  }
+  #services .service {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #services .service .card {
+    width: 90%;
+    margin: 1em 0;
+  }
+  #about .about-me {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  #about .about-me .about-image {
+    width: 80%;
+  }
+  #about .about-me .about-content {
+    width: 80%;
+    margin-top: 2em;
+  }
+  #portfolio .samples {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  #portfolio .samples .card {
+    width: 90%;
+    margin: 1em 0;
+  }
+  #testimonials .customers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  #testimonials .customers .customer {
+    width: 90%;
+    margin: 1em 0;
+  }
+  #blogs .articles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  #blogs .articles .article {
+    width: 90%;
+    margin: 1em 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
